@@ -1,0 +1,22 @@
+.MMM-Bdx-TBM-Tram td {
+	text-align: left;
+	font-size: 0.7em;
+	line-height: 1em;
+}
+
+.MMM-Bdx-TBM-Tram th {
+	text-align: left;
+	font-size: 0.8em;
+	line-height: 1em;
+}
+
+.circle_ligne_B {
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	font-size: 15px;
+	color: #FFFFFF;
+	line-height: 20px;
+	text-align: center;
+	background: #E50040
+}
