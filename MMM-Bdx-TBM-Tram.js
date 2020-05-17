@@ -2,7 +2,7 @@ Module.register("MMM-Bdx-TBM-Tram", {
 
 	// Default module config
 	defaults: {
-		updateInterval: 60 * 60 * 1000,
+		updateInterval: 60 * 1000,
 		animationSpeed: 1000,
 		lang: config.language,
 		records: 5,
@@ -109,9 +109,16 @@ Module.register("MMM-Bdx-TBM-Tram", {
 			}
 			lTempsElmt.innerHTML = "";
 			if(0 < lHoursToNextTram) {
-				lTempsElmt.innerHTML = lHoursToNextTram + "h "
+				lTempsElmt.innerHTML = lHoursToNextTram + "h ";
 			}
-			lTempsElmt.innerHTML = lTempsElmt.innerHTML + lMinToNextTram + "min";
+
+			if(2 > lMinToNextTram) {
+				lMinToNextTram = "Proche";
+			} else {
+				lMinToNextTram = lMinToNextTram + "min";
+			}
+
+			lTempsElmt.innerHTML = lTempsElmt.innerHTML + lMinToNextTram;
 			lPassageEventElmt.appendChild(lTempsElmt);
 
 			/* Destination */
